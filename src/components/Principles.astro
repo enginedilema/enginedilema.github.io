@@ -1,0 +1,38 @@
+---
+const principles = [
+  {
+    number: "01",
+    title: "Tecnologia amb propòsit",
+    text: "La tecnologia ha de resoldre problemes o crear oportunitats. L'eina mai no ha de ser l'objectiu.",
+  },
+  {
+    number: "02",
+    title: "Aprendre fent",
+    text: "La programació, la robòtica i la intel·ligència artificial s'entenen millor quan es converteixen en projectes reals.",
+  },
+  {
+    number: "03",
+    title: "Innovació amb criteri",
+    text: "Adoptar noves eines també significa entendre'n els límits, els riscos i les implicacions.",
+  },
+];
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-index">05 / Principis</span>
+      <h2>Com entenc la tecnologia</h2>
+    </div>
+
+    <div class="principles-grid">
+      {principles.map((item) => (
+        <article class="principle">
+          <span>{item.number}</span>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

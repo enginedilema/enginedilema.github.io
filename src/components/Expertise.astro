@@ -1,0 +1,49 @@
+---
+const areas = [
+  {
+    number: '01',
+    title: 'Formació',
+    subtitle: 'Aprendre tecnologia per poder-la aplicar.',
+    text: 'Formació a docents, alumnat i professionals en competència digital, robòtica, programació i ús educatiu de la intel·ligència artificial.',
+    tags: ['Docència', 'Competència digital', 'Robòtica', 'Innovació educativa'],
+  },
+  {
+    number: '02',
+    title: 'Desenvolupament',
+    subtitle: 'De la idea a una solució digital.',
+    text: 'Experiència en desenvolupament web, programació, dades i creació de solucions digitals vinculades a projectes educatius i de transformació.',
+    tags: ['Web', 'Programació', 'Dades', 'Automatització'],
+  },
+  {
+    number: '03',
+    title: 'Intel·ligència Artificial',
+    subtitle: 'Integrar la IA amb criteri.',
+    text: 'Aplicació de la IA generativa en contextos educatius i professionals, amb una mirada pràctica, crítica i orientada a resoldre problemes reals.',
+    tags: ['IA generativa', 'LLM', 'Educació', 'Experimentació'],
+  },
+];
+---
+
+<section class="section section-bordered" id="ambits">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">02 / ÀMBITS</p>
+      <h2>Tres àmbits.<br />Una mateixa manera de treballar.</h2>
+    </div>
+
+    <div class="expertise-grid">
+      {areas.map((area) => (
+        <article class="expertise-card">
+          <div class="card-number mono">{area.number}</div>
+          <h3>{area.title}</h3>
+          <p class="card-subtitle">{area.subtitle}</p>
+          <p>{area.text}</p>
+
+          <ul class="tag-list" aria-label={`Àrees relacionades amb ${area.title}`}>
+            {area.tags.map((tag) => <li>{tag}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

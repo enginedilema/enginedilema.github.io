@@ -1,0 +1,46 @@
+---
+const projects = [
+  {
+    number: '01',
+    title: 'Acreditació professional',
+    category: 'Avaluació · Competències · Formació professional',
+    text: 'Participació en processos d’avaluació i acreditació de competències professionals adquirides mitjançant l’experiència laboral i vies no formals de formació.',
+  },
+  {
+    number: '02',
+    title: 'Associació AulaViva',
+    category: 'Educació · Innovació · Comunitat',
+    text: 'Presidència d’una iniciativa vinculada a l’educació i al desenvolupament de projectes orientats a generar noves experiències d’aprenentatge.',
+  },
+  {
+    number: '03',
+    title: 'Mentoria en robòtica',
+    category: 'Robòtica · Programació · STEAM',
+    text: 'Acompanyament de centres educatius, professorat i alumnat en projectes de robòtica educativa, programació i pensament computacional.',
+  },
+];
+---
+
+<section class="section section-dark" id="projectes">
+  <div class="container">
+    <div class="section-heading section-heading-light">
+      <p class="eyebrow">03 / PROJECTES</p>
+      <h2>Projectes, responsabilitats<br />i iniciatives.</h2>
+    </div>
+
+    <div class="projects-list">
+      {projects.map((project) => (
+        <article class="project-row">
+          <span class="project-number mono">{project.number}</span>
+
+          <div class="project-main">
+            <h3>{project.title}</h3>
+            <p class="project-category">{project.category}</p>
+          </div>
+
+          <p class="project-description">{project.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

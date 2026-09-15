@@ -1,0 +1,47 @@
+---
+const experiences = [
+  {
+    period: 'IA + EDUCACIÓ',
+    title: 'AI Skills Lab',
+    role: 'Mentor',
+    text: 'Participació en un projecte orientat a apropar la intel·ligència artificial als entorns educatius i facilitar-ne una integració útil, crítica i responsable.',
+  },
+  {
+    period: 'ROBÒTICA EDUCATIVA',
+    title: 'Instituts i escoles de l’Alt Camp',
+    role: 'Formador',
+    text: 'Formació i acompanyament en robòtica, programació i pensament computacional adreçats a centres educatius del territori.',
+  },
+];
+---
+
+<section class="section section-bordered" id="experiencia">
+  <div class="container">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">04 / EXPERIÈNCIA</p>
+        <h2>Compartir coneixement.</h2>
+      </div>
+
+      <p class="section-intro">
+        Formació, mentoria i acompanyament per convertir la tecnologia
+        en una eina real d’aprenentatge i transformació.
+      </p>
+    </div>
+
+    <div class="experience-list">
+      {experiences.map((item) => (
+        <article class="experience-item">
+          <p class="experience-period mono">{item.period}</p>
+
+          <div>
+            <h3>{item.title}</h3>
+            <p class="experience-role">{item.role}</p>
+          </div>
+
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

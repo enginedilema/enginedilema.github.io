@@ -1,0 +1,33 @@
+---
+const navItems = [
+  { href: '#perfil', label: 'Perfil' },
+  { href: '#ambits', label: 'Àmbits' },
+  { href: '#projectes', label: 'Projectes' },
+  { href: '#experiencia', label: 'Experiència' },
+  { href: '#contacte', label: 'Contacte' },
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#inici" aria-label="Anar a l'inici">
+      <span class="brand-name">Oriol Miró</span>
+      <span class="brand-role">Formador · Professor</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegació principal">
+      {navItems.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+
+    <a
+      class="header-link"
+      href="https://www.linkedin.com/in/oriol-mir%C3%B3-toran-31381440/"
+      target="_blank"
+      rel="noreferrer"
+    >
+      LinkedIn ↗
+    </a>
+  </div>
+</header>
