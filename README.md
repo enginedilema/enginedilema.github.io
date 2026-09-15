@@ -38,7 +38,7 @@ El resultat es generarà dins del directori `dist/`.
 Domini:
 
 ```text
-https://oriolmiro.github.io
+https://enginedilema.github.io
 ```
 
 El desplegament a GitHub Pages es configurarà mitjançant GitHub Actions.
